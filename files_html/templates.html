@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaForge | Templates </title>
+    <link rel="stylesheet" href="../files_css/templates.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <img src="../photo/Screenshot_2026-10-31_204223-removebg-preview.png" alt="IdeaForge Logo">
+                <h2>IdeaForge</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="my_project.html" class="nav-link">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>My Projects</span>
+                </a>
+
+                <a href="new_project.html" class="nav-link">
+                    <i class="fa-solid fa-plus-circle"></i>
+                    <span>New Project</span>
+                </a>
+
+                <a href="templates.html" class="nav-link active">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Templates</span>
+                </a>
+
+                <a href="settings.html" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Toolbar -->
+            <div class="top-toolbar">
+
+                <!-- Search -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="templateSearch" placeholder="Search templates...">
+
+                    <button type="button" id="clearSearch">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+
+                <!-- Toolbar Actions -->
+                <div class="toolbar-actions">
+
+                    <!-- Dark Mode -->
+                    <button type="button" class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+
+                    <!-- Notifications -->
+                    <div class="notification-wrapper">
+
+                        <button type="button" class="notification-btn" id="notificationBtn">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="notification-count">2</span>
+                        </button>
+
+                        <div class="notification-dropdown" id="notificationDropdown">
+
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <span>2 New</span>
+                            </div>
+
+                            <div class="notification-list">
+
+                                <div class="notification-item">
+
+                                    <div class="notification-icon">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                    </div>
+
+                                    <div class="notification-content">
+                                        <h4>New Templates</h4>
+                                        <p>Explore new templates for your projects.</p>
+                                        <small>Recently</small>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="notification-item">
+
+                                    <div class="notification-icon">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </div>
+
+                                    <div class="notification-content">
+                                        <h4>Discover Ideas</h4>
+                                        <p>Find inspiration for your next project.</p>
+                                        <small>Recently</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile -->
+                    <div class="profile-picture">
+                        <img src="../photo/WhatsApp Image 2026-11-05 at 12.51.22 AM.jpeg" alt="Profile">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Page Header -->
+            <section class="page-header">
+
+                <div class="header-text">
+                    <h1>Explore Templates</h1>
+
+                    <p>
+                        Choose a ready-made template to turn your idea into an organized project plan.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Template Filters -->
+            <section class="template-filters">
+            
+                <button class="filter-btn active" data-filter="all">All</button>
+            
+                <button class="filter-btn" data-filter="Web Development">
+                    Web Development
+                </button>
+            
+                <button class="filter-btn" data-filter="App Development">
+                    App Development
+                </button>
+            
+                <button class="filter-btn" data-filter="Marketing">
+                    Marketing
+                </button>
+            
+                <button class="filter-btn" data-filter="UI/UX Design">
+                    UI/UX Design
+                </button>
+            
+                <button class="filter-btn" data-filter="Education">
+                    Education
+                </button>
+            
+            </section>
+
+            <!-- Templates Section -->
+            <section class="templates-section">
+
+                <div class="templates-grid">
+
+                    <!-- Template 1 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+
+                        <span class="template-category">Web Development</span>
+
+                        <h3>E-Commerce Website</h3>
+
+                        <p>
+                            Create an online store with product pages, shopping cart, and checkout.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Template 2 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                        <span class="template-category">App Development</span>
+
+                        <h3>Mobile App</h3>
+
+                        <p>
+                            Plan and organize the development of your next mobile application.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Template 3 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <span class="template-category">Web Development</span>
+
+                        <h3>Portfolio Website</h3>
+
+                        <p>
+                            Build a professional portfolio to showcase your skills and projects.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Template 4 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <span class="template-category">Marketing</span>
+
+                        <h3>Marketing Campaign</h3>
+
+                        <p>
+                            Organize your marketing strategy, content, and campaign goals.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Template 5 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+
+                        <span class="template-category">UI/UX Design</span>
+
+                        <h3>UI/UX Design</h3>
+
+                        <p>
+                            Plan the design process from user research to the final interface.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Template 6 -->
+                    <div class="template-card">
+
+                        <div class="template-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span class="template-category">Education</span>
+
+                        <h3>Online Learning Platform</h3>
+
+                        <p>
+                            Organize an online learning platform with courses and student features.
+                        </p>
+
+                        <a href="template-result.html" class="use-template-btn">
+                            Use Template
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="no-results" id="noResults">
+                    No templates found.
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../files_js/templates.js"></script>
+
+</body>
+</html>

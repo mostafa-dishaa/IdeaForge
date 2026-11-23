@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | IdeaForge</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../files_css/settings.css">
+
+</head>
+
+<body>
+
+    <div class="settings-container">
+
+        <!-- Page Header -->
+        <header class="settings-header">
+
+            <div>
+                <span class="settings-label">PREFERENCES</span>
+                <h1>Settings</h1>
+                <p>Manage your account and customize your experience.</p>
+            </div>
+
+            <a href="dashboard.html" class="back-dashboard-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- Settings Layout -->
+        <div class="settings-layout">
+
+            <!-- Settings Navigation -->
+            <aside class="settings-sidebar">
+
+                <a href="#profile" class="settings-nav-link active">
+                    <i class="fa-regular fa-user"></i>
+                    Profile
+                </a>
+
+                <a href="#appearance" class="settings-nav-link">
+                    <i class="fa-solid fa-palette"></i>
+                    Appearance
+                </a>
+
+                <a href="#notifications" class="settings-nav-link">
+                    <i class="fa-regular fa-bell"></i>
+                    Notifications
+                </a>
+
+                <a href="#security" class="settings-nav-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Security
+                </a>
+
+                <a href="#subscription" class="settings-nav-link">
+                    <i class="fa-solid fa-crown"></i>
+                    Subscription
+                </a>
+
+            </aside>
+
+
+            <!-- Settings Content -->
+            <main class="settings-content">
+
+
+                <!-- 1. Profile Settings -->
+                <section class="settings-section" id="profile">
+
+                    <div class="settings-section-header">
+
+                        <div>
+                            <span class="section-label">PERSONAL INFORMATION</span>
+                            <h2>Profile Settings</h2>
+                            <p>Update your personal information and profile details.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-avatar-area">
+
+                        <div class="profile-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="avatar-info">
+                            <h3>Profile Picture</h3>
+                            <p>Upload a photo to personalize your account.</p>
+                        </div>
+
+                        <button class="upload-avatar-btn" type="button">
+                            <i class="fa-solid fa-upload"></i>
+                            Upload Photo
+                        </button>
+
+                        <input type="file" id="avatarInput" accept="image/*" hidden>
+
+                    </div>
+
+
+                    <div class="settings-form">
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address</label>
+                            <input type="email" id="emailAddress" placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="userBio">Bio</label>
+                            <textarea id="userBio" placeholder="Tell us a little about yourself..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-actions">
+                        <button class="save-profile-btn" type="button">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Save Changes
+                        </button>
+                    </div>
+
+                </section>
+
+
+                <!-- 2. Appearance Settings -->
+                <section class="settings-section" id="appearance">
+
+                    <div class="settings-section-header">
+
+                        <div>
+                            <span class="section-label">CUSTOMIZATION</span>
+                            <h2>Appearance</h2>
+                            <p>Choose how IdeaForge looks on your device.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="appearance-options">
+
+                        <label class="appearance-option">
+                            <div class="appearance-option-info">
+                                <i class="fa-solid fa-sun"></i>
+                                <div>
+                                    <h3>Light Mode</h3>
+                                    <p>Use the light appearance.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" name="theme" value="light" checked>
+                        </label>
+
+
+                        <label class="appearance-option">
+                            <div class="appearance-option-info">
+                                <i class="fa-solid fa-moon"></i>
+                                <div>
+                                    <h3>Dark Mode</h3>
+                                    <p>Use the dark appearance.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" name="theme" value="dark">
+                        </label>
+
+
+                        <label class="appearance-option">
+                            <div class="appearance-option-info">
+                                <i class="fa-solid fa-desktop"></i>
+                                <div>
+                                    <h3>System Default</h3>
+                                    <p>Follow your device appearance.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" name="theme" value="system">
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 3. Notifications Settings -->
+                <section class="settings-section" id="notifications">
+
+                    <div class="settings-section-header">
+
+                        <div>
+                            <span class="section-label">STAY UPDATED</span>
+                            <h2>Notifications</h2>
+                            <p>Control which notifications you want to receive.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-options">
+
+                        <div class="notification-option">
+                            <div>
+                                <h3>Email Notifications</h3>
+                                <p>Receive important updates through email.</p>
+                            </div>
+
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="emailNotifications" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+
+                        <div class="notification-option">
+                            <div>
+                                <h3>Project Updates</h3>
+                                <p>Get notified about project progress.</p>
+                            </div>
+
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="projectNotifications" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+
+                        <div class="notification-option">
+                            <div>
+                                <h3>Task Reminders</h3>
+                                <p>Receive reminders about pending tasks.</p>
+                            </div>
+
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="taskNotifications" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+
+                        <div class="notification-option">
+                            <div>
+                                <h3>Weekly Summary</h3>
+                                <p>Get a weekly overview of your activity.</p>
+                            </div>
+
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="weeklyNotifications">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 4. Security Settings -->
+                <section class="settings-section" id="security">
+
+                    <div class="settings-section-header">
+
+                        <div>
+                            <span class="section-label">ACCOUNT PROTECTION</span>
+                            <h2>Security</h2>
+                            <p>Manage your password and account security.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form">
+
+                        <div class="form-group full-width">
+                            <label for="currentPassword">Current Password</label>
+
+                            <div class="password-input">
+                                <input type="password" id="currentPassword" placeholder="Enter current password">
+
+                                <button class="toggle-password" type="button" data-target="currentPassword">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+
+                            <div class="password-input">
+                                <input type="password" id="newPassword" placeholder="Enter new password">
+
+                                <button class="toggle-password" type="button" data-target="newPassword">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" placeholder="Confirm new password">
+
+                                <button class="toggle-password" type="button" data-target="confirmPassword">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-actions">
+                        <button class="change-password-btn" type="button">
+                            <i class="fa-solid fa-lock"></i>
+                            Update Password
+                        </button>
+                    </div>
+
+                </section>
+
+
+                <!-- 5. Subscription Settings -->
+                <section class="settings-section" id="subscription">
+
+                    <div class="settings-section-header">
+
+                        <div>
+                            <span class="section-label">YOUR MEMBERSHIP</span>
+                            <h2>Subscription & Plan</h2>
+                            <p>Manage your current plan and explore available features.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="subscription-card">
+
+                        <div class="subscription-card-header">
+
+                            <div class="subscription-icon">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+
+                            <span class="current-plan-badge">CURRENT PLAN</span>
+
+                        </div>
+
+
+                        <h3>Free Plan</h3>
+
+                        <p>
+                            Get started with essential tools to organize
+                            and manage your ideas.
+                        </p>
+
+
+                        <div class="plan-features">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Create Projects
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Basic Templates
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Task Management
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Basic Project Tracking
+                            </div>
+
+                        </div>
+
+
+                        <button class="upgrade-plan-btn" type="button">
+                            Upgrade Plan
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="../files_js/settings.js"></script>
+
+</body>
+
+</html>

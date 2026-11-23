@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaForge | New Project</title>
+    <link rel="stylesheet" href="../files_css/new_project.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Steps Sidebar -->
+        <aside class="steps-sidebar">
+            <div class="steps-header">
+                <img src="../photo/Screenshot_2026-10-31_204223-removebg-preview.png" alt="IdeaForge Logo">
+                <h2>IdeaForge</h2>
+            </div>
+
+            <div class="steps-list">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <div class="step-info">
+                        <h3>Describe Your Idea</h3>
+                        <p>Share your vision</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <div class="step-info">
+                        <h3>Choose Template</h3>
+                        <p>Select your structure</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <div class="step-info">
+                        <h3>Review Plan</h3>
+                        <p>Finalize your project</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="dashboard.html" class="back-dashboard">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Header -->
+                <div class="page-header">
+                    <!-- Bulb Image -->
+                    <div class="bulb-image">
+                        <img src="../photo/Gemini_Generated_Image_pvvqcbpvvqcbpvvq-removebg-preview(2).png"
+                            alt="Creative Idea">
+                    </div>
+
+                    <div class="header-text">
+                        <h1>Describe Your Idea</h1>
+                        <p>
+                            Share your vision with us, and we'll help you turn it into reality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Idea Form -->
+                <section class="idea-section">
+                    <div class="idea-box">
+                        <textarea id="ideaInput" placeholder="Write your idea here..." maxlength="2500"></textarea>
+
+                        <div class="idea-footer">
+                            <span class="character-count" id="characterCount">
+                                0/2500 Characters
+                            </span>
+
+                            <!-- Get Idea Button -->
+                            <button class="explore-btn" type="button">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                                Get Idea
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Project Result -->
+                <section class="project-result" id="projectResult">
+                
+                    <div class="result-header">
+                        <h2 id="resultTitle"></h2>
+                        <p id="resultDescription"></p>
+                    </div>
+                
+                    <div class="result-goals">
+                        <h3>Project Goals</h3>
+                        <ul id="resultGoals"></ul>
+                    </div>
+                
+                </section>
+
+
+
+                <!-- Templates -->
+                <section class="templates-section">
+                    <h2>Try one of our templates</h2>
+                    <div class="templates-grid">
+                    
+                        <button class="template-btn" data-category="store" type="button">
+                            <i class="fa-solid fa-store"></i>
+                            Store
+                        </button>
+                    
+                        <button class="template-btn" data-category="education" type="button">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Education
+                        </button>
+                    
+                        <button class="template-btn" data-category="health" type="button">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            Health
+                        </button>
+                    
+                        <button class="template-btn" data-category="restaurant" type="button">
+                            <i class="fa-solid fa-utensils"></i>
+                            Restaurant
+                        </button>
+                    
+                        <button class="template-btn" data-category="technology" type="button">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            Technology
+                        </button>
+                    
+                        <button class="template-btn" data-category="other" type="button">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            Other
+                        </button>
+                    
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../files_js/new_project.js"></script>
+</body>
+
+</html>

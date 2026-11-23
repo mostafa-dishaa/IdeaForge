@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | IdeaForge</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../files_css/project-details.css">
+</head>
+
+<body>
+<div class="project-details-container">
+
+    <!-- Page Header -->
+    <header class="page-header">
+
+        <a href="my_project.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Projects
+        </a>
+
+        <div class="header-actions">
+
+            <button class="edit-project-btn" type="button">
+                <i class="fa-solid fa-pen"></i>
+                Edit Project
+            </button>
+
+            <button class="more-options-btn" type="button">
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+
+        <div class="project-hero-content">
+
+            <div class="project-category">
+                <i class="fa-solid fa-code"></i>
+                Web Development
+            </div>
+
+            <h1>Online Store Website</h1>
+
+            <p>
+                A modern e-commerce website designed to provide
+                customers with a smooth and simple online shopping experience.
+            </p>
+
+            <div class="project-meta">
+
+                <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    Created: November 15, 2026
+                </span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    Last Updated: November 20, 2026
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="project-status">
+            <span class="status-dot"></span>
+            In Progress
+        </div>
+
+    </section>
+
+
+    <!-- Project Statistics -->
+    <section class="project-stats">
+
+        <div class="stat-card">
+
+            <div class="stat-icon progress-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="stat-info">
+                <span>Overall Progress</span>
+                <h2>65%</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon tasks-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <div class="stat-info">
+                <span>Total Tasks</span>
+                <h2>20</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon completed-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="stat-info">
+                <span>Completed Tasks</span>
+                <h2>13</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon time-icon">
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+
+            <div class="stat-info">
+                <span>Estimated Duration</span>
+                <h2>4 Weeks</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Project Progress -->
+    <section class="project-progress-section">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">PROJECT TRACKING</span>
+                <h2>Project Progress</h2>
+                <p>Track your project completion status.</p>
+            </div>
+
+            <span class="progress-percentage">65% Completed</span>
+
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 65%;"></div>
+        </div>
+
+        <div class="progress-footer">
+            <span>13 of 20 tasks completed</span>
+            <span>7 tasks remaining</span>
+        </div>
+
+    </section>
+
+
+    <!-- Project Tasks -->
+    <section class="project-tasks-section">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">WORK MANAGEMENT</span>
+                <h2>Project Tasks</h2>
+                <p>Manage and track your project tasks.</p>
+            </div>
+
+            <button class="add-task-btn" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </div>
+
+
+        <div class="task-filters">
+        
+            <button class="task-filter active" data-filter="all" type="button">
+                All Tasks <span>20</span>
+            </button>
+        
+            <button class="task-filter" data-filter="completed" type="button">
+                Completed <span>13</span>
+            </button>
+        
+            <button class="task-filter" data-filter="in-progress" type="button">
+                In Progress <span>4</span>
+            </button>
+        
+            <button class="task-filter" data-filter="pending" type="button">
+                Pending <span>3</span>
+            </button>
+        
+        </div>
+
+
+        <div class="tasks-list">
+
+            <!-- Task 1 -->
+            <div class="task-item completed" data-status="completed">
+
+                <div class="task-checkbox">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-info">
+                    <h3>Research Competitors</h3>
+                    <p>Analyze similar e-commerce websites.</p>
+                </div>
+
+                <span class="task-status completed-status">Completed</span>
+
+                <button class="task-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Task 2 -->
+            <div class="task-item completed" data-status="completed">
+
+                <div class="task-checkbox">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-info">
+                    <h3>Create Website Wireframes</h3>
+                    <p>Prepare the main website layouts.</p>
+                </div>
+
+                <span class="task-status completed-status">Completed</span>
+
+                <button class="task-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Task 3 -->
+            <div class="task-item in-progress" data-status="in-progress">
+
+                <div class="task-checkbox">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+
+                <div class="task-info">
+                    <h3>Build Homepage</h3>
+                    <p>Develop the main landing page.</p>
+                </div>
+
+                <span class="task-status progress-status">In Progress</span>
+
+                <button class="task-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Task 4 -->
+            <div class="task-item pending" data-status="pending">
+
+                <div class="task-checkbox">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+
+                <div class="task-info">
+                    <h3>Develop Product Pages</h3>
+                    <p>Create individual product pages.</p>
+                </div>
+
+                <span class="task-status pending-status">Pending</span>
+
+                <button class="task-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Task 5 -->
+            <div class="task-item pending" data-status="pending">
+
+                <div class="task-checkbox">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+
+                <div class="task-info">
+                    <h3>Test Website Responsiveness</h3>
+                    <p>Test the website on different screen sizes.</p>
+                </div>
+
+                <span class="task-status pending-status">Pending</span>
+
+                <button class="task-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <button class="view-all-tasks-btn" type="button">
+            View All Tasks
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </section>
+
+
+    <!-- Project Resources -->
+    <section class="project-resources-section">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">PROJECT MATERIALS</span>
+                <h2>Project Resources</h2>
+                <p>Useful tools and resources for this project.</p>
+            </div>
+
+            <button class="add-resource-btn" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Add Resource
+            </button>
+
+        </div>
+
+
+        <div class="resources-grid">
+
+            <div class="resource-card">
+
+                <div class="resource-icon html-resource">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+
+                <div class="resource-info">
+                    <h3>HTML5</h3>
+                    <p>Structure and content</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square resource-link"></i>
+
+            </div>
+
+
+            <div class="resource-card">
+
+                <div class="resource-icon css-resource">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+
+                <div class="resource-info">
+                    <h3>CSS3</h3>
+                    <p>Styling and layouts</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square resource-link"></i>
+
+            </div>
+
+
+            <div class="resource-card">
+
+                <div class="resource-icon js-resource">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+
+                <div class="resource-info">
+                    <h3>JavaScript</h3>
+                    <p>Website functionality</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square resource-link"></i>
+
+            </div>
+
+
+            <div class="resource-card">
+
+                <div class="resource-icon figma-resource">
+                    <i class="fa-brands fa-figma"></i>
+                </div>
+
+                <div class="resource-info">
+                    <h3>Figma</h3>
+                    <p>UI/UX Design</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square resource-link"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Project Notes -->
+    <section class="project-notes-section">
+
+        <div class="section-header">
+            <div>
+                <span class="section-label">PROJECT DOCUMENTATION</span>
+                <h2>Project Notes</h2>
+                <p>Keep important information about your project.</p>
+            </div>
+        </div>
+
+        <textarea class="project-notes" placeholder="Write your project notes here..."></textarea>
+
+        <div class="notes-actions">
+            <button class="save-notes-btn" type="button">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Save Notes
+            </button>
+        </div>
+
+    </section>
+</div>
+    <script src="../files_js/project-details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaForge | Dashboard</title>
+    <link rel="stylesheet" href="../files_css/dashboard.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Brand -->
+            <div class="brand">
+                <img src="../photo/Screenshot_2026-10-31_204223-removebg-preview.png" alt="IdeaForge Logo">
+                <span>IdeaForge</span>
+            </div>
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#" class="active">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="my_project.html">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>My Project</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="new_project.html">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <span>New Project</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="templates.html">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Templates</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="settings.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+        
+                <div class="welcome-text">
+                    <h1>Welcome back!</h1>
+                    <p>Here's what's happening with your projects.</p>
+                </div>
+        
+                <div class="header-actions">
+        
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="project-search" placeholder="Search projects...">
+                    </div>
+        
+                    <div class="notification-wrapper">
+                        <button class="notification-btn" id="notification-btn" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="notification-count">3</span>
+                        </button>
+                    
+                        <div class="notification-dropdown" id="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <span>3 New</span>
+                            </div>
+                    
+                            <div class="notification-list">
+                                <div class="notification-item">
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                    <div>
+                                        <h4>New Project Created</h4>
+                                        <p>Your project has been created successfully.</p>
+                                        <small>2 minutes ago</small>
+                                    </div>
+                                </div>
+                    
+                                <div class="notification-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div>
+                                        <h4>Project Completed</h4>
+                                        <p>Mobile Application is now completed.</p>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                </div>
+                    
+                                <div class="notification-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <h4>Project Reminder</h4>
+                                        <p>Don't forget to continue your project.</p>
+                                        <small>Yesterday</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </header>
+        
+        
+            <!-- Statistics -->
+            <section class="statistics">
+        
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-folder"></i>
+                    </div>
+                    <div>
+                        <p>Total Projects</p>
+                        <h2 class="total-projects">12</h2>
+                    </div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <p>In Progress</p>
+                        <h2 class="in-progress-count">5</h2>
+                    </div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <p>Completed</p>
+                        <h2 class="completed-count">7</h2>
+                    </div>
+                </div>
+        
+            </section>
+        
+        
+            <!-- Create New Project -->
+            <section class="create-project">
+        
+                <div class="create-text">
+                    <h2>Have a new idea?</h2>
+                    <p>Turn your ideas into organized plans and real projects.</p>
+                </div>
+        
+                <a href="new_project.html" class="create-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Project
+                </a>
+        
+            </section>
+        
+        
+            <!-- Recent Projects -->
+            <section class="recent-projects">
+        
+                <div class="section-header">
+                    <div>
+                        <h2>Recent Projects</h2>
+                        <p>Keep track of your latest projects.</p>
+                    </div>
+        
+                    <a href="my-project.html">View All</a>
+                </div>
+        
+                <div class="projects-list" id="projects-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="../files_js/dashboard.js"></script>
+</body>
+
+</html>

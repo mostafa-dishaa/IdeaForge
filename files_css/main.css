@@ -1,0 +1,869 @@
+/* ===== Global Settings ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ===== Section One: 75% ===== */
+.section-one {
+  width: 100%;
+  height: 80vh;
+  background-color: #000E24; /* غيّر اللون بنفسك */
+}
+
+.section-one-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 0 4%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand span {
+    color: #0066FF;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  color: #99C2FF;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #7c5cff;
+}
+
+/* Login & Sign Up Container */
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Login Button */
+.user-profile {
+  width: 110px;
+  height: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2e8eff 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile:hover,
+.user-profile:focus-visible {
+  background-color: rgba(46, 142, 255, 0.7);
+  box-shadow: 0 0 10px rgba(46, 142, 255, 0.5);
+  outline: none;
+}
+
+.user-profile-inner {
+  width: 106px;
+  height: 41px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.user-profile-inner svg {
+  width: 21px;
+  height: 21px;
+  fill: #fff;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 13px 18px;
+  background: var(--primary-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.signup-btn .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-btn .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  height: var(--arrow-stroke);
+  background: var(--primary-color);
+  position: relative;
+  transition: 0.2s;
+}
+
+.signup-btn .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  padding: 3px;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.signup-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.signup-btn:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.signup-btn:hover .arrow::before {
+  right: 0;
+}
+
+
+/* ===== Hero Content: Two Columns ===== */
+.hero-content {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 6%;
+}
+
+.hero-column-one,
+.hero-column-two {
+    min-width: 0;
+    min-height: 0;
+}
+
+/* ===== Hero Column One ===== */
+.hero-column-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ===== Hero Title ===== */
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: clamp(38px, 4.5vw, 68px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.title-white {
+    color: #ffffff;
+}
+
+.title-gradient {
+    background: linear-gradient(90deg,
+            #b69aff 0%,
+            #c9baff 45%,
+            #b8e5ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ===== Hero Description ===== */
+.hero-description {
+    max-width: 480px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #d0d0e0;
+    margin-bottom: 28px;
+}
+
+/* ===== NEXT Button ===== */
+.hero-next-button {
+    --main-size: 1.1em;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 14px 13px 22px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: var(--main-size);
+    font-weight: 700;
+    color: #ffffff;
+
+    background: linear-gradient(110deg,
+            #645bff 0%,
+            #568dff 50%,
+            #8cddff 100%);
+
+    box-shadow: 0 5px 22px rgba(100, 91, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-next-button span {
+    transition: transform 0.3s ease;
+}
+
+.hero-next-button svg {
+    height: 20px;
+    width: 31px;
+    fill: #ffffff;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.hero-next-button svg polygon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-next-button svg polygon:nth-child(1) {
+    transform: translateX(-60%);
+}
+
+.hero-next-button svg polygon:nth-child(2) {
+    transform: translateX(-30%);
+}
+
+.hero-next-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(100, 91, 255, 0.4);
+}
+
+.hero-next-button:hover svg {
+    transform: translateX(4px);
+}
+
+.hero-next-button:hover svg polygon {
+    transform: translateX(0);
+}
+
+.hero-next-button:hover svg polygon:nth-child(1) {
+    transition-delay: 0.12s;
+}
+
+.hero-next-button:hover svg polygon:nth-child(2) {
+    transition-delay: 0.06s;
+}
+
+.hero-next-button:active {
+    transform: scale(0.96);
+}
+
+/* ===== Hero Column Two: Image ===== */
+.hero-column-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 0;
+    perspective: 1000px;
+}
+
+/* ===== Hero Image ===== */
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 25px;
+    animation: floatingImage 4s ease-in-out infinite;
+    /* Smooth Hover */
+    transition:
+        transform 0.4s ease,
+        border-radius 0.4s ease,
+        filter 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Floating Animation */
+@keyframes floatingImage {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Hover Effect */
+.hero-image:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-radius: 18px;
+    filter: brightness(1.05);
+    box-shadow:
+        0 15px 40px rgba(100, 91, 255, 0.25),
+        0 0 25px rgba(140, 221, 255, 0.15);
+}
+
+/* ===== Section Two: Features ===== */
+.section-two {
+    width: 100%;
+    height: 25vh;
+    background-color: #001433;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5%;
+}
+
+/* ===== Features Container ===== */
+.features-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* ===== Feature Card ===== */
+.feature-card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* ===== Icons ===== */
+.feature-icon {
+    font-size: 27px;
+    background: linear-gradient(135deg, #a78bfa, #8cddff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+/* ===== Headings ===== */
+.feature-card h3 {
+    color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ===== Descriptions ===== */
+.feature-card p {
+    max-width: 230px;
+    color: #b8c7df;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* ===== Hover Animation ===== */
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(140, 221, 255, 0.06);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.15);
+}
+
+/* =================================
+   Responsive Design
+================================= */
+
+/* ===== Tablet ===== */
+
+/* ===== Navbar: Medium Screens ===== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        padding-bottom: 10px;
+    }
+
+    .nav-actions {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .brand img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .brand span {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-actions {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 8px;
+    }
+
+    .user-profile {
+        width: 90px;
+        height: 40px;
+    }
+
+    .user-profile-inner {
+        width: 86px;
+        height: 36px;
+        font-size: 11px;
+    }
+
+    .signup-btn {
+        padding: 11px 13px;
+        font-size: 11px;
+    }
+
+
+    /* Section One */
+
+    .section-one {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .section-one-grid {
+        height: auto;
+    }
+
+    .hero-content {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 6%;
+    }
+
+    .hero-column-one {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 7vw, 48px);
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        max-width: 550px;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .hero-column-two {
+        height: auto;
+        min-height: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 380px;
+        max-height: 350px;
+    }
+
+
+    /* Section Two */
+
+    .section-two {
+        height: auto;
+        min-height: 0;
+        padding: 30px 5%;
+    }
+
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 15px 10px;
+    }
+
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 480px) {
+
+    /* Navbar */
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+        padding: 12px 4%;
+        gap: 12px;
+    }
+
+    .brand {
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .brand span {
+        font-size: 1.6rem;
+    }
+
+    .nav-links {
+        gap: 12px;
+        row-gap: 10px;
+        padding-bottom: 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+    .user-profile {
+        width: 75px;
+        height: 36px;
+        border-radius: 11px;
+    }
+
+    .user-profile-inner {
+        width: 71px;
+        height: 32px;
+        border-radius: 9px;
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .user-profile-inner svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .signup-btn {
+        padding: 10px 9px;
+        gap: 5px;
+        font-size: 10px;
+        border-radius: 12px;
+    }
+
+    .signup-btn .arrow {
+        width: 7px;
+    }
+
+
+    /* Hero Section */
+
+    .section-one {
+        min-height: 0;
+        height: auto;
+    }
+
+    .hero-content {
+        padding: 35px 5% 30px;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .hero-next-button {
+        font-size: 14px;
+        padding: 11px 13px 11px 18px;
+    }
+
+    .hero-next-button svg {
+        width: 25px;
+        height: 17px;
+    }
+
+    .hero-column-two {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 290px;
+        max-height: 280px;
+        border-radius: 18px;
+    }
+
+
+    /* Features Section */
+
+    .section-two {
+        padding: 25px 5%;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .feature-card {
+        padding: 12px 6px;
+        gap: 7px;
+    }
+
+    .feature-icon {
+        font-size: 23px;
+    }
+
+    .feature-card h3 {
+        font-size: 12px;
+    }
+
+    .feature-card p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* ===== Very Small Mobile ===== */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 10px 3%;
+    }
+
+    .brand {
+        font-size: 14px;
+    }
+
+    .brand img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .brand span {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .user-profile {
+        width: 65px;
+    }
+
+    .user-profile-inner {
+        width: 61px;
+        font-size: 9px;
+    }
+
+    .signup-btn {
+        padding: 9px 7px;
+        font-size: 9px;
+    }
+
+    .hero-title {
+        font-size: 29px;
+    }
+
+    .hero-description {
+        font-size: 11px;
+    }
+
+    .hero-image {
+        max-width: 250px;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+
+
+/* ===== Reduced Motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-image {
+        animation: none;
+        transition: none;
+    }
+
+    .hero-next-button,
+    .hero-next-button span,
+    .hero-next-button svg,
+    .feature-card,
+    .feature-icon {
+        transition: none;
+    }
+
+}

@@ -1,0 +1,811 @@
+
+/* ========================================
+   1. General Settings
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+.project-details-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 35px 45px;
+}
+
+
+/* ========================================
+   2. Page Header
+======================================== */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    color: #6366f1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.edit-project-btn,
+.more-options-btn {
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.edit-project-btn {
+    padding: 0 17px;
+    background: #6366f1;
+    color: #ffffff;
+}
+
+.edit-project-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.more-options-btn {
+    width: 42px;
+    background: #ffffff;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.more-options-btn:hover {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+
+/* ========================================
+   3. Project Hero
+======================================== */
+
+.project-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+    background: linear-gradient(135deg, #111d4a, #4338ca);
+    padding: 35px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 30px rgba(67, 56, 202, 0.12);
+}
+
+.project-hero-content {
+    flex: 1;
+}
+
+.project-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.13);
+    color: #c7d2fe;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.project-hero h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.project-hero-content > p {
+    max-width: 650px;
+    color: #c7d2fe;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+    font-size: 11px;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #34d399;
+}
+
+
+/* ========================================
+   4. Project Statistics
+======================================== */
+
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 22px;
+    border: 1px solid #e8edf5;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 14, 36, 0.025);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 14, 36, 0.07);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.progress-icon {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.tasks-icon {
+    background: #eaf3ff;
+    color: #3b82f6;
+}
+
+.completed-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.time-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.stat-info span {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.stat-info h2 {
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* ========================================
+   5. General Section Header
+======================================== */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.section-label {
+    display: block;
+    color: #6366f1;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+}
+
+.section-header h2 {
+    color: #172033;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.section-header p {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   6. Project Progress
+======================================== */
+
+.project-progress-section {
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    border-radius: 17px;
+    margin-bottom: 35px;
+}
+
+.progress-percentage {
+    padding: 9px 13px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #6366f1;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 11px;
+    background: #eef2f7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 20px;
+}
+
+.progress-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.progress-footer span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   7. Project Tasks
+======================================== */
+
+.project-tasks-section {
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    border-radius: 17px;
+    margin-bottom: 35px;
+}
+
+.add-task-btn,
+.add-resource-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 15px;
+    border-radius: 9px;
+    background: #6366f1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.add-task-btn:hover,
+.add-resource-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.task-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf0f5;
+    margin-bottom: 10px;
+}
+
+.task-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.task-filter span {
+    color: #94a3b8;
+}
+
+.task-filter:hover,
+.task-filter.active {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.task-filter.active span {
+    color: #6366f1;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px 5px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.task-checkbox {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.task-item.completed .task-checkbox {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.task-item.in-progress .task-checkbox {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.task-item.pending .task-checkbox {
+    background: #f1f5f9;
+    color: #94a3b8;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-info h3 {
+    color: #1e293b;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.task-info p {
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.task-status {
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.completed-status {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.progress-status {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.pending-status {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.task-more-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: transparent;
+    color: #94a3b8;
+    transition: 0.3s ease;
+}
+
+.task-more-btn:hover {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.view-all-tasks-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #6366f1;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.view-all-tasks-btn:hover {
+    background: #eef2ff;
+}
+
+
+/* ========================================
+   8. Project Resources
+======================================== */
+
+.project-resources-section {
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    border-radius: 17px;
+    margin-bottom: 35px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.resource-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    border: 1px solid #edf0f5;
+    border-radius: 13px;
+    transition: 0.3s ease;
+}
+
+.resource-card:hover {
+    border-color: #c7d2fe;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 14, 36, 0.04);
+}
+
+.resource-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.html-resource {
+    background: #fff1eb;
+    color: #e44d26;
+}
+
+.css-resource {
+    background: #eaf3ff;
+    color: #264de4;
+}
+
+.js-resource {
+    background: #fff9df;
+    color: #c49b00;
+}
+
+.figma-resource {
+    background: #fff0f0;
+    color: #f24e1e;
+}
+
+.resource-info {
+    flex: 1;
+}
+
+.resource-info h3 {
+    color: #1e293b;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.resource-info p {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.resource-link {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   9. Project Notes
+======================================== */
+
+.project-notes-section {
+    background: #ffffff;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    border-radius: 17px;
+    margin-bottom: 30px;
+}
+
+.project-notes {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #1e293b;
+    background: #f8fafc;
+    transition: 0.3s ease;
+}
+
+.project-notes:focus {
+    border-color: #818cf8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.project-notes::placeholder {
+    color: #94a3b8;
+}
+
+.notes-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.save-notes-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 17px;
+    border-radius: 9px;
+    background: #6366f1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.save-notes-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .project-details-container {
+        padding: 30px;
+    }
+
+    .project-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .project-details-container {
+        padding: 20px;
+    }
+
+    .page-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .edit-project-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .project-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .project-hero h1 {
+        font-size: 26px;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .task-filters {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .task-info {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .task-status {
+        margin-left: 40px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-notes {
+        width: 100%;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .project-details-container {
+        padding: 15px;
+    }
+
+    .project-hero h1 {
+        font-size: 22px;
+    }
+
+    .project-hero-content > p {
+        font-size: 13px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .edit-project-btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .task-info h3 {
+        font-size: 14px;
+    }
+
+    .task-info p {
+        font-size: 12px;
+    }
+
+    .add-task-btn,
+    .add-resource-btn,
+    .save-notes-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
